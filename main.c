@@ -9,6 +9,8 @@ int main()
 	{
 		//system("cls");
 		printf("1:New game\n");
+		printf("2:Game rules\n");
+		printf("3:Exit\n");
         scanf("%d", &choice);
 
         if (choice == 1)
@@ -21,9 +23,17 @@ int main()
 			printf("3:Hard(8 numbers)\n");
 			scanf("%d", &choise1);
         }
-        if ((choice != 1))
+      	else if (choice == 2)
+		{
+			printf("Game rules\n");
+		}
+		else if (choice == 3)
+		{
+			printf("****\n");
+		}
+		if ((choice != 1) && (choice != 2))
 			break;
-		system("PAUSE");
+	//	system("PAUSE");
     }
-    system("PAUSE");
+   // system("PAUSE");
 }
