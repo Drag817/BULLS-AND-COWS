@@ -22,6 +22,54 @@ int main()
 			printf("2:Medium(6 numbers)\n");
 			printf("3:Hard(8 numbers)\n");
 			scanf("%d", &choise1);
+
+            if (choise1 == 1)
+			{
+				int choise3;
+				printf("Hidden number\n");
+				printf("****\n");
+				printf("Exit?\n");
+				printf("1:Yes\n");
+				scanf("%d",&choise3);
+
+				if (choise3 == 1)
+				{
+				printf("Good bye\n");
+				break;
+				}
+			}
+
+			if (choise1 ==2)
+			{
+				int choise3;
+				printf("Hidden number\n");
+				printf("******\n");
+				printf("Exit?\n");
+				printf("1:Yes\n");
+				scanf("%d",&choise3);
+
+				if (choise3 == 1)
+				{
+				printf("Good bye\n");
+				break;
+				}
+			}
+
+			if (choise1 ==3)
+			{
+				int choise3;
+				printf("Hidden number\n");
+				printf("********\n");
+				printf("Exit?\n");
+				printf("1:Yes\n");
+				scanf("%d",&choise3);
+
+				if (choise3 == 1)
+				{
+				printf("Good bye\n");
+				break;
+				}
+			}
         }
       	else if (choice == 2)
 		{
