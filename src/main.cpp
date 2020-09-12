@@ -5,40 +5,6 @@
 
 using namespace std;
 
-void GetRandomNumber(char *num)
-{
-	char digits[10] = "123456789";
-	srand((unsigned)time(0));
-	for (unsigned i = 0, rmax = 9; i < 4; i++)
-	{
-		unsigned r = rand() % rmax--;
-		num[i] = digits[r];
-		digits[r] = digits[rmax];
-	}
-}
-
-void GetRandomNumber2(char *num)
-{
-	char digits[10] = "123456789";
-	srand((unsigned)time(0));
-	for (unsigned i = 0, rmax = 9; i < 6; i++) {
-		unsigned r = rand() % rmax--;
-		num[i] = digits[r];
-		digits[r] = digits[rmax];
-	}
-}
-
-void GetRandomNumber3(char *num)
-{
-	char digits[10] = "123456789";
-	srand((unsigned)time(0));
-	for (unsigned i = 0, rmax = 9; i < 8; i++) {
-		unsigned r = rand() % rmax--;
-		num[i] = digits[r];
-		digits[r] = digits[rmax];
-	}
-}
-
 template <int row, int col>
 bool CheckAnswer(char(&arr)[row][col], unsigned &bull, unsigned &cow)
 {
