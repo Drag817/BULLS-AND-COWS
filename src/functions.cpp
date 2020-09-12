@@ -2,38 +2,23 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void GetRandomNumber(char *num)
+void swap(int& x, int& y)
 {
-	char digits[10] = "123456789";
-	srand((unsigned)time(0));
-	for (unsigned i = 0, rmax = 9; i < 4; i++)
-	{
-		unsigned r = rand() % rmax--;
-		num[i] = digits[r];
-		digits[r] = digits[rmax];
-	}
+    int temp = 0;
+    temp = x;
+    x = y;
+    y = temp;
 }
 
-void GetRandomNumber2(char *num)
+void Random(int* A, int N)
 {
-	char digits[10] = "123456789";
-	srand((unsigned)time(0));
-	for (unsigned i = 0, rmax = 9; i < 6; i++) {
-		unsigned r = rand() % rmax--;
-		num[i] = digits[r];
-		digits[r] = digits[rmax];
-	}
-}
-
-void GetRandomNumber3(char *num)
-{
-	char digits[10] = "123456789";
-	srand((unsigned)time(0));
-	for (unsigned i = 0, rmax = 9; i < 8; i++) {
-		unsigned r = rand() % rmax--;
-		num[i] = digits[r];
-		digits[r] = digits[rmax];
-	}
+    int i = 0;
+    for (int j = 0; j < 10; j++) {
+        A[j] = j;
+    }
+    for (i = 0; i < N * 10; i++) {
+        swap(A[rand() % 10], A[rand() % 10]);
+    }
 }
 
 int Menu()
