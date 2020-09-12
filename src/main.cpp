@@ -5,25 +5,6 @@
 
 using namespace std;
 
-template <int row, int col>
-bool CheckAnswer(char(&arr)[row][col], unsigned &bull, unsigned &cow)
-{
-	cow = 0; bull = 0;
-	unsigned i1, i2;
-	for (i1 = 0; i1 < col - 1; i1++)
-	{
-		for (i2 = 0; i2 < col - 1; i2++)
-		{
-			if (arr[0][i1] == arr[1][i2])
-			{
-				if (i1 == i2) cow++;
-				else bull++;
-			}
-		}
-	}
-	return cow == col - 1;
-}
-
 int main()
 {
 	srand((unsigned)time(NULL));

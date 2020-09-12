@@ -21,6 +21,22 @@ void Random(int* A, int N)
     }
 }
 
+void AnswerCheck(int* A, int* B, int& bull, int& cow, int N)
+{
+    bull = 0;
+    cow = 0;
+    for (int i = 0; i < N; i++) {
+        for (int j = 0; j < N; j++) {
+            if (A[i] == B[j]) {
+                if (i == j)
+                    bull++;
+                else
+                    cow++;
+            }
+        }
+    }
+}
+
 int Menu()
 {
     int choise1 = 0, choise2 = 0;
