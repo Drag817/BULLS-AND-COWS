@@ -2,6 +2,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+using namespace std;
+
 void swap(int& x, int& y)
 {
     int temp = 0;
@@ -57,17 +59,59 @@ int Menu()
 				case 1: {
 				    printf("Hidden number\n");
 				    printf("* * * *\n");
-				    break;
+				    int N = 4;
+				    int A[N];
+				    int B[N];
+				    Random(A, N);
+					printf("\n");
+				    int bull = 0, cow = 0;
+				    do {
+				        printf("Enter four numbers one by one\n");
+				        for (int i = 0; i < N; i++) {
+                    		cin >> B[i];
+				        }
+				        AnswerCheck(A, B, bull, cow, N);
+				        printf("bull: %d \tcow: %d \n\n",bull,cow);
+				    } while (bull <= 3);
+				    printf("You win!!! \n");
 				}
 				case 2: {
 				    printf("Hidden number\n");
 				    printf("* * * * * *\n");
-				    break;
+				    int N = 6;
+				    int A[N];
+				    int B[N];
+				    Random(A, N);
+					printf("\n");
+				    int bull = 0, cow = 0;
+				    do {
+				        printf("Enter four numbers one by one\n");
+				        for (int i = 0; i < N; i++) {
+                    		cin >> B[i];
+				        }
+				        AnswerCheck(A, B, bull, cow, N);
+				        printf("bull: %d \tcow: %d \n\n",bull,cow);
+				    } while (bull <= 5);
+				    printf("You win!!! \n");
 				}
 				case 3: {
 				    printf("Hidden number\n");
 				    printf("* * * * * * * *\n");
-				    break;
+				    int N = 8;
+				    int A[N];
+				    int B[N];
+				    Random(A, N);
+					printf("\n");
+				    int bull = 0, cow = 0;
+				    do {
+				        printf("Enter four numbers one by one\n");
+				        for (int i = 0; i < N; i++) {
+                    		cin >> B[i];
+				        }
+				        AnswerCheck(A, B, bull, cow, N);
+				        printf("bull: %d \tcow: %d \n\n",bull,cow);
+				    } while (bull <= 7);
+				    printf("You win!!! \n");
 				}
 				case 4: {
 				    Menu();
