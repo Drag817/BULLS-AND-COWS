@@ -74,6 +74,7 @@ int Menu()
 				        printf("bull: %d \tcow: %d \n\n",bull,cow);
 				    } while (bull <= 3);
 				    printf("You win!!! \n");
+				    break;
 				}
 				case 2: {
 				    printf("Hidden number\n");
@@ -93,6 +94,7 @@ int Menu()
 				        printf("bull: %d \tcow: %d \n\n",bull,cow);
 				    } while (bull <= 5);
 				    printf("You win!!! \n");
+				    break;
 				}
 				case 3: {
 				    printf("Hidden number\n");
@@ -112,6 +114,7 @@ int Menu()
 				        printf("bull: %d \tcow: %d \n\n",bull,cow);
 				    } while (bull <= 7);
 				    printf("You win!!! \n");
+				    break;
 				}
 				case 4: {
 				    Menu();
