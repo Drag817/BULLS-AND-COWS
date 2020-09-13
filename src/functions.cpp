@@ -138,7 +138,3 @@ int Menu()
     }
     return 0;
 }
-
-main(){
-	Menu();
-}
