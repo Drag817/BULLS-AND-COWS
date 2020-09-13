@@ -1,9 +1,19 @@
-.PHONY: clean
+.PHONY: clean all run
 
-all: 
-	g++ -Wall -c ./src/main.cpp -o ./build/main.o
-	g++ -Wall -c ./src/functions.cpp -o ./build/functions.o
-	g++ -Wall ./build/main.o ./build/functions.o -o ./bin/main
+BIN_DIR = ./bin
+BUILD_DIR = ./bin
+SRC_DIR = ./src
+
+all: $(BIN_DIR)/main
+
+$(BIN_DIR)/main: $(BUILD_DIR)/main.o $(BUILD_DIR)/functions.o
+	g++ -Wall $(BUILD_DIR)/main.o $(BUILD_DIR)/functions.o -o $(BIN_DIR)/main
+
+$(BUILD_DIR)/main.o:
+	g++ -Wall -c $(SRC_DIR)/main.cpp -o $(BUILD_DIR)/main.o
+
+$(BUILD_DIR)/functions.o:
+	g++ -Wall -c $(SRC_DIR)/functions.cpp -o $(BUILD_DIR)/functions.o
 
 run: 
 	./bin/main
