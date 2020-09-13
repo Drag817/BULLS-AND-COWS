@@ -1,8 +1,4 @@
-#include <iostream>
-#include <stdio.h>
-#include <stdlib.h>
-
-using namespace std;
+#include "functions.h"
 
 void swap(int& x, int& y)
 {
@@ -40,7 +36,8 @@ void AnswerCheck(int* A, int* B, int& bull, int& cow, int N)
 }
 
 int Menu()
-{
+{	
+    srand(time(NULL));
     int choise1 = 0, choise2 = 0;
     printf("1.New Game\n");
     printf("2.Game Rules\n");
@@ -132,11 +129,5 @@ int Menu()
 			break;
 	    }
     }
-    return 0;
-}
-
-int main()
-{
-    Menu();
     return 0;
 }
