@@ -1,4 +1,4 @@
-.PHONY: clean all run
+.PHONY: clean all run runtest
 
 BIN_DIR = ./bin
 BUILD_DIR = ./bin
@@ -27,6 +27,9 @@ $(BUILD_DIR)/test.o:
 
 run: 
 	./bin/main
+
+runtest:
+	./bin/test
 
 clean:
 	rm -f build/*.o
