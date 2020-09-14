@@ -44,7 +44,7 @@ int Menu()
     printf("2.Game Rules\n");
     printf("3.Exit\n");
     scanf("%d", &choise1);
-   	system("clear");
+    system("clear");
     switch (choise1) {
     case 1: {
         printf("\tSelect difficulty level\n\n");
@@ -53,7 +53,7 @@ int Menu()
         printf("3.Hard\n");
         printf("4.Back\n");
         scanf("%d", &choise2);
-    	system("clear");
+        system("clear");
         switch (choise2) {
         case 1: {
             printf("Hidden number\n");
@@ -132,8 +132,8 @@ int Menu()
         printf("Где 'Быки' это число угаданное сточностью до позиции, а "
                "'Коровы' угаданное число которое не стоит на своем месте.\n\n");
         char c;
-        scanf("%c",&c);
-        scanf("%c",&c);
+        scanf("%c", &c);
+        scanf("%c", &c);
         Menu();
         break;
     }
