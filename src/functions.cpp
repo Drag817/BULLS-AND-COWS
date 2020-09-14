@@ -39,19 +39,21 @@ int Menu()
 {
     srand(time(NULL));
     int choise1 = 0, choise2 = 0;
+    system("clear");
     printf("1.New Game\n");
     printf("2.Game Rules\n");
     printf("3.Exit\n");
     scanf("%d", &choise1);
+   	system("clear");
     switch (choise1) {
     case 1: {
-        system("cls");
         printf("\tSelect difficulty level\n\n");
         printf("1.Easy\n");
         printf("2.Medium\n");
         printf("3.Hard\n");
         printf("4.Back\n");
         scanf("%d", &choise2);
+    	system("clear");
         switch (choise2) {
         case 1: {
             printf("Hidden number\n");
@@ -129,6 +131,9 @@ int Menu()
                "программа выдает подсказки в виде 'Быков' и 'Коров'.\n");
         printf("Где 'Быки' это число угаданное сточностью до позиции, а "
                "'Коровы' угаданное число которое не стоит на своем месте.\n\n");
+        char c;
+        scanf("%c",&c);
+        scanf("%c",&c);
         Menu();
         break;
     }
