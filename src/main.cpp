@@ -3,6 +3,6 @@
 int main()
 {
     srand(time(NULL));
-	Menu();
-	return 0;
+    Menu();
+    return 0;
 }
